@@ -1,0 +1,52 @@
+// Variables
+$box-size: 60px;
+$gap-size: 10px;
+$border-radius: 8px;
+$border-color: #333;
+$background-color: #f0f0f0;
+$box-background: #000;
+$box-hover-color: #444;
+$transition-speed: 0.3s;
+
+// Contenedor principal
+#boxContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($box-size, 1fr));
+  gap: $gap-size;
+  padding: $gap-size;
+  background-color: $background-color;
+  border-radius: $border-radius;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+// Estilo de las cajas
+.box {
+  width: 100%;
+  height: $box-size;
+  border: 2px solid $border-color;
+  background-color: $box-background;
+  border-radius: $border-radius;
+  transition: all $transition-speed ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: $box-hover-color;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+// Media query para dispositivos móviles
+@media (max-width: 600px) {
+  #boxContainer {
+    grid-template-columns: repeat(auto-fit, minmax($box-size * 0.8, 1fr));
+  }
+
+  .box {
+    height: $box-size * 0.8;
+  }
+}
