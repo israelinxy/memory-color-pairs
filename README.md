@@ -3,6 +3,9 @@
 ## Descripción
 Este es un juego de memoria interactivo donde los jugadores deben encontrar parejas de cuadrados del mismo color en una cuadrícula. El juego está desarrollado con JavaScript vanilla y utiliza Vite como herramienta de construcción.
 
+![Imagen del juego](encuentra-las-parejas.png)
+
+
 ## Características
 - Cuadrícula de cuadrados con colores ocultos
 - Temporizador para medir el tiempo de juego
